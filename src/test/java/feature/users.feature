@@ -14,4 +14,4 @@ Feature: User
     When User submits POST request for users API
     Then The Status Code should be as 201
     Then Verify the "id" is generated Successfully
-    And Validate the json schema of "l.json" API response
+    And Validate the json schema of "success.json" API response

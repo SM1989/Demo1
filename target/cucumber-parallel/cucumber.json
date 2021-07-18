@@ -3,11 +3,11 @@
     "line": 3,
     "elements": [
       {
-        "start_timestamp": "2021-07-17T22:25:18.776Z",
+        "start_timestamp": "2021-07-18T07:13:16.248Z",
         "before": [
           {
             "result": {
-              "duration": 39268459,
+              "duration": 186489920,
               "status": "passed"
             },
             "match": {
@@ -22,7 +22,7 @@
         "after": [
           {
             "result": {
-              "duration": 1572432,
+              "duration": 1420179,
               "status": "passed"
             },
             "match": {
@@ -35,7 +35,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1142783775,
+              "duration": 4335548458,
               "status": "passed"
             },
             "line": 7,
@@ -53,7 +53,7 @@
           },
           {
             "result": {
-              "duration": 1632813415,
+              "duration": 3000058619,
               "status": "passed"
             },
             "line": 8,
@@ -65,7 +65,7 @@
           },
           {
             "result": {
-              "duration": 28971383,
+              "duration": 103820985,
               "status": "passed"
             },
             "line": 9,
@@ -83,7 +83,7 @@
           },
           {
             "result": {
-              "duration": 4828821,
+              "duration": 5277085,
               "status": "passed"
             },
             "line": 10,
@@ -119,11 +119,11 @@
         ]
       },
       {
-        "start_timestamp": "2021-07-17T22:25:21.757Z",
+        "start_timestamp": "2021-07-18T07:13:24.312Z",
         "before": [
           {
             "result": {
-              "duration": 7766346,
+              "duration": 16665879,
               "status": "passed"
             },
             "match": {
@@ -138,7 +138,7 @@
         "after": [
           {
             "result": {
-              "duration": 252213,
+              "duration": 1391441,
               "status": "passed"
             },
             "match": {
@@ -151,7 +151,7 @@
         "steps": [
           {
             "result": {
-              "duration": 207211150,
+              "duration": 519630115,
               "status": "passed"
             },
             "line": 13,
@@ -173,7 +173,7 @@
           },
           {
             "result": {
-              "duration": 806056790,
+              "duration": 869585737,
               "status": "passed"
             },
             "line": 14,
@@ -185,7 +185,7 @@
           },
           {
             "result": {
-              "duration": 1361222,
+              "duration": 3177671,
               "status": "passed"
             },
             "line": 15,
@@ -203,7 +203,7 @@
           },
           {
             "result": {
-              "duration": 378940011,
+              "duration": 870548714,
               "status": "passed"
             },
             "line": 16,
@@ -221,16 +221,15 @@
           },
           {
             "result": {
-              "error_message": "java.lang.IllegalArgumentException: Schema to use cannot be null\n\tat io.restassured.module.jsv.JsonSchemaValidator.validateSchemaIsNotNull(JsonSchemaValidator.java:270)\n\tat io.restassured.module.jsv.JsonSchemaValidator.access$300(JsonSchemaValidator.java:75)\n\tat io.restassured.module.jsv.JsonSchemaValidator$JsonSchemaValidatorFactory.create(JsonSchemaValidator.java:281)\n\tat io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema(JsonSchemaValidator.java:166)\n\tat io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath(JsonSchemaValidator.java:117)\n\tat main.java.coreComponents.Common.AssertUtil.validateJsonSchema(AssertUtil.java:20)\n\tat test.java.stepDefinitions.userStepdefs.validateTheJsonSchemaOfAPIResponse(userStepdefs.java:86)\n\tat ✽.Validate the json schema of \"l.json\" API response(file:src/test/java/feature/users.feature:17)\n",
-              "duration": 3687673,
-              "status": "failed"
+              "duration": 514483319,
+              "status": "passed"
             },
             "line": 17,
-            "name": "Validate the json schema of \"l.json\" API response",
+            "name": "Validate the json schema of \"success.json\" API response",
             "match": {
               "arguments": [
                 {
-                  "val": "\"l.json\"",
+                  "val": "\"success.json\"",
                   "offset": 28
                 }
               ],
