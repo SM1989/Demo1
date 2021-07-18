@@ -1,0 +1,265 @@
+[
+  {
+    "line": 3,
+    "elements": [
+      {
+        "start_timestamp": "2021-07-17T22:25:18.776Z",
+        "before": [
+          {
+            "result": {
+              "duration": 39268459,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.initializeRepo(Scenario)"
+            }
+          }
+        ],
+        "line": 6,
+        "name": "Verify the value of \u0027first_name\u0027 for \u0027id\u0027 as \u002710\u0027",
+        "description": "",
+        "id": "user;verify-the-value-of--first-name--for--id--as--10-",
+        "after": [
+          {
+            "result": {
+              "duration": 1572432,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1142783775,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User API request with a valid page id equals to \"2\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"2\"",
+                  "offset": 48
+                }
+              ],
+              "location": "userStepdefs.userAPIRequestWithAValidPageIdEqualsTo(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1632813415,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User submits GET request for users API",
+            "match": {
+              "location": "userStepdefs.userSubmitsGETRequestForUsersAPI()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 28971383,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "The Status Code should be as 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 29
+                }
+              ],
+              "location": "userStepdefs.theStatusCodeShouldBeAs(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4828821,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "The value of \"first_name\" for \"id\" equal to 10 is \"Byron\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"first_name\"",
+                  "offset": 13
+                },
+                {
+                  "val": "\"id\"",
+                  "offset": 30
+                },
+                {
+                  "val": "10",
+                  "offset": 44
+                },
+                {
+                  "val": "\"Byron\"",
+                  "offset": 50
+                }
+              ],
+              "location": "userStepdefs.theValueOfForEqualToIs(String,String,int,String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@users-api"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-17T22:25:21.757Z",
+        "before": [
+          {
+            "result": {
+              "duration": 7766346,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.initializeRepo(Scenario)"
+            }
+          }
+        ],
+        "line": 12,
+        "name": "Verify if the \u0027id\u0027 gets generated after Submitting a POST Request",
+        "description": "",
+        "id": "user;verify-if-the--id--gets-generated-after-submitting-a-post-request",
+        "after": [
+          {
+            "result": {
+              "duration": 252213,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 207211150,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Build the Request with Payload with name as \"Bryant\" and job as \"BA\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Bryant\"",
+                  "offset": 44
+                },
+                {
+                  "val": "\"BA\"",
+                  "offset": 64
+                }
+              ],
+              "location": "userStepdefs.buildTheRequestWithPayloadWithNameAsAndJobAs(String,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 806056790,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "User submits POST request for users API",
+            "match": {
+              "location": "userStepdefs.userSubmitsPOSTRequestForUsersAPI()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1361222,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "The Status Code should be as 201",
+            "match": {
+              "arguments": [
+                {
+                  "val": "201",
+                  "offset": 29
+                }
+              ],
+              "location": "userStepdefs.theStatusCodeShouldBeAs(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 378940011,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "Verify the \"id\" is generated Successfully",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"id\"",
+                  "offset": 11
+                }
+              ],
+              "location": "userStepdefs.verifyTheIsGeneratedSuccessfully(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.IllegalArgumentException: Schema to use cannot be null\n\tat io.restassured.module.jsv.JsonSchemaValidator.validateSchemaIsNotNull(JsonSchemaValidator.java:270)\n\tat io.restassured.module.jsv.JsonSchemaValidator.access$300(JsonSchemaValidator.java:75)\n\tat io.restassured.module.jsv.JsonSchemaValidator$JsonSchemaValidatorFactory.create(JsonSchemaValidator.java:281)\n\tat io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema(JsonSchemaValidator.java:166)\n\tat io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath(JsonSchemaValidator.java:117)\n\tat main.java.coreComponents.Common.AssertUtil.validateJsonSchema(AssertUtil.java:20)\n\tat test.java.stepDefinitions.userStepdefs.validateTheJsonSchemaOfAPIResponse(userStepdefs.java:86)\n\tat ✽.Validate the json schema of \"l.json\" API response(file:src/test/java/feature/users.feature:17)\n",
+              "duration": 3687673,
+              "status": "failed"
+            },
+            "line": 17,
+            "name": "Validate the json schema of \"l.json\" API response",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"l.json\"",
+                  "offset": 28
+                }
+              ],
+              "location": "userStepdefs.validateTheJsonSchemaOfAPIResponse(String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@users-api"
+          }
+        ]
+      }
+    ],
+    "name": "User",
+    "description": "  Description: Users GET and POST requests",
+    "id": "user",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/feature/users.feature",
+    "tags": [
+      {
+        "name": "@users-api",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

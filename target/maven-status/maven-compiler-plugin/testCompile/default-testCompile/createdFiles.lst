@@ -1,0 +1,4 @@
+test/java/stepDefinitions/userStepdefs.class
+test/java/runner/AbstractTestNGCucumberParallelTests.class
+test/java/runner/RunnerIT.class
+test/java/stepDefinitions/Hooks.class

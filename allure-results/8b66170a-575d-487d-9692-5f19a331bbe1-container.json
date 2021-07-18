@@ -1,0 +1,1 @@
+{"uuid":"8b66170a-575d-487d-9692-5f19a331bbe1","name":"Surefire suite","children":["0789d823-215c-4e42-8d36-96d5f3248500"],"befores":[],"afters":[{"name":"tearDown","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1626558745910,"stop":1626558745911}],"links":[],"start":1626558738848,"stop":1626558745911}
