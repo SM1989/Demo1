@@ -80,12 +80,6 @@ public class userStepdefs {
 
     @And("Validate the json schema of {string} API response")
     public void validateTheJsonSchemaOfAPIResponse(String jsonFilePath) throws Throwable{
-        System.out.println("Response is -- " + response.body().asString());
-        //AssertUtil.validateJsonSchema(response, "jsonSchema/user/success.json");
-//        AssertUtil.validateJsonSchema(response, System.getProperty("user.dir")+"/src/test/java/jsonSchema/"+jsonFilePath+".json");
-
-        //AssertUtil.validateJsonSchema(response, jsonFilePath+".json");
-        response.then().assertThat().body(matchesJsonSchemaInClasspath("jsonSchema/user/success.json"));
-
+        AssertUtil.validateJsonSchema(response, "jsonSchema/user/"+jsonFilePath+".json");
     }
 }

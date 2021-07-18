@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: test.java.runner.RunnerIT
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.964 s - in test.java.runner.RunnerIT
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.583 s - in test.java.runner.RunnerIT
