@@ -1,13 +1,10 @@
+test/java/pageObjects/selectablePage.class
 test/java/testCases/TC01_scalableDragAndDrop.class
+test/java/utilities/ReadConfig.class
 test/java/testCases/TC02_selectableMultiSelect.class
 test/java/pageObjects/homePage.class
-test/java/testCases/TC03_controlgroupMultiAction.class
-test/java/pageObjects/droppablePage.class
-test/java/pageObjects/selectablePage.class
-test/java/utilities/ReadConfig.class
 test/java/utilities/Reporting.class
 test/java/pageObjects/controlgroupPage.class
+test/java/testCases/TC03_controlgroupMultiAction.class
 test/java/testCases/baseClass.class
-test/java/runner/AbstractTestNGCucumberParallelTests.class
-test/java/runner/RunnerIT.class
-test/java/stepDefinitions/Hooks.class
+test/java/pageObjects/droppablePage.class
