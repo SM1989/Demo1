@@ -1,10 +1,8 @@
-test/java/pageObjects/selectablePage.class
-test/java/testCases/TC01_scalableDragAndDrop.class
+test/java/tests/test03_verifyNameAndCarWebView.class
 test/java/utilities/ReadConfig.class
-test/java/testCases/TC02_selectableMultiSelect.class
-test/java/pageObjects/homePage.class
+test/java/tests/test01_verifyTitle.class
+test/java/tests/test02_verifyClickingNoButton.class
 test/java/utilities/Reporting.class
-test/java/pageObjects/controlgroupPage.class
-test/java/testCases/TC03_controlgroupMultiAction.class
-test/java/testCases/baseClass.class
-test/java/pageObjects/droppablePage.class
+test/java/pages/webViewPage.class
+test/java/tests/BaseClass.class
+test/java/pages/homePage.class

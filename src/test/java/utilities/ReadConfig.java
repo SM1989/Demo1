@@ -10,7 +10,7 @@ public class ReadConfig {
     Properties pro;
 
     public ReadConfig() throws IOException {
-        File src = new File(System.getProperty("user.dir")+"/configuration/config.properties");
+        File src = new File(System.getProperty("user.dir")+"/src/test/java/data/config.properties");
         try{
             FileInputStream fis = new FileInputStream(src);
             pro = new Properties();
@@ -21,12 +21,8 @@ public class ReadConfig {
         }
     }
 
-    public String readURL(){
-        String url = pro.getProperty("baseURL");
-        return url;
-    }
-    public String readDroppedText(){
-        String droppedText = pro.getProperty("droppedText");
-        return droppedText;
+    public String readData(String data){
+        String val = pro.getProperty(data);
+        return val;
     }
 }
