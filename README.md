@@ -1,1 +1,1 @@
-# Demo1
+mvn clean test -Dbrowser=chrome
