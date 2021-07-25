@@ -1,20 +1,30 @@
 package test.java.pages;
 
+import com.github.javafaker.Bool;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.TouchAction;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidKeyCode;
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.Set;
 
 public class homePage {
     WebDriverWait wait;
 
     public homePage(AppiumDriver<MobileElement> driver) {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-        wait = new WebDriverWait(driver,10);
+        wait = new WebDriverWait(driver,20);
 
     }
 
@@ -46,8 +56,25 @@ public class homePage {
     public WebElement typeToThrow;
     @AndroidFindBy(id = "io.selendroid.testapp:id/topLevelElementTest")
     public WebElement displayAndFocus;
+    @AndroidFindBy(xpath = "//*[@class='android.widget.FrameLayout']")
+    public WebElement dialogBox;
+    @AndroidFindBy(id = "android:id/message")
+    public WebElement dialogBoxMessage;
+    @AndroidFindBy(id = "io.selendroid.testapp:id/inputUsername")
+    public WebElement username;
+    @AndroidFindBy(xpath = "/hierarchy/android.widget.Toast")
+    public WebElement toast;
+    String toastXpath = "/hierarchy/android.widget.Toast";
+    @AndroidFindBy(id = "io.selendroid.testapp:id/showPopupWindowButton")
+    public WebElement popupWindow;
+    @AndroidFindBy(id = "android:id/alertTitle")
+    public WebElement appCrashException;
+
+
+
 
     public String verifyTitle() {
+        wait.until(ExpectedConditions.visibilityOf(pageTitle));
         String title = pageTitle.getText();
         return title;
     }
@@ -78,5 +105,60 @@ public class homePage {
     }
     public void clickonWebIcon(){
         webIcon.click();
+    }
+    public void clickonRegisterUser(){
+        userRegistration.click();
+    }
+    public void clickonShowProgress(AppiumDriver<MobileElement> driverr){
+        showProgress.click();
+        System.out.println("dialogBoxMessage -- "+dialogBoxMessage.getText());
+        wait.until(ExpectedConditions.visibilityOf(username));
+        System.out.println("Dialog Box Dissappeared");
+    }
+    public String clickonDisplayToast(AppiumDriver<MobileElement> driverr){
+        displayAToast.click();
+        wait.until(ExpectedConditions.presenceOfElementLocated((By.xpath(toastXpath))));
+        String toastMessage = toast.getText();
+        System.out.println("toastMessage -- "+toastMessage);
+        return toastMessage;
+    }
+    public void clickonPopup(AppiumDriver<MobileElement> driverr) throws InterruptedException {
+        displayPopup.click();
+        wait.until(ExpectedConditions.visibilityOf(popupWindow));
+        System.out.println("popupWindow displayed");
+        Thread.sleep(2000);
+
+        Set<String> contextNames = driverr.getContextHandles();
+        for (String contextName : contextNames) {
+            System.out.println(contextName);
+        }
+
+
+//        driverr.findElement(By.xpath("(//*[@class='android.widget.Button'])[9]")).click();
+//        Thread.sleep(3000);
+        driverr.findElement(By.xpath("//*[contains(text(),'miss')]")).click();
+        Thread.sleep(2000);
+//        Alert alert = driverr.switchTo().alert();
+//        alert.dismiss();
+
+        TouchAction act = new TouchAction(driverr);
+
+        System.out.println("Dismissed");
+    }
+
+    public String clickToUnhandledException(AppiumDriver<MobileElement> driverr) throws InterruptedException {
+        pressToThrow.click();
+        System.out.println("Clicked on the button");
+        wait.until(ExpectedConditions.visibilityOf(appCrashException));
+        System.out.println("Exception Title -- "+appCrashException.getText());
+        return appCrashException.getText();
+    }
+
+    public String typeToUnhandledException(String text,AndroidDriver<MobileElement> driverr) throws InterruptedException {
+        typeToThrow.click();
+        driverr.pressKey(new KeyEvent(AndroidKey.A));
+        wait.until(ExpectedConditions.visibilityOf(appCrashException));
+        System.out.println("Exception Title -- "+appCrashException.getText());
+        return appCrashException.getText();
     }
 }

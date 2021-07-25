@@ -2,6 +2,7 @@ package test.java.tests;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.*;
 import test.java.utilities.ReadConfig;
@@ -10,7 +11,9 @@ import java.io.IOException;
 import java.net.URL;
 
 public class BaseClass {
-    AppiumDriver<MobileElement> driver;
+//    AppiumDriver<MobileElement> driver;
+    AndroidDriver<MobileElement> driver;
+
 
     @BeforeClass
     public void setup() throws IOException {
@@ -33,8 +36,12 @@ public class BaseClass {
         caps.setCapability("platformVersion", platformVersion);
         caps.setCapability("appPackage", appPackage);
         caps.setCapability("appActivity", appActivity);
+        caps.setCapability("autoAcceptAlerts", true);
+        caps.setCapability("autoDismissAlerts", true);
         URL url = new URL(urlData);
-        driver = new AppiumDriver<MobileElement>(url,caps);
+//        driver = new AppiumDriver<MobileElement>(url,caps);
+        driver = new AndroidDriver<MobileElement>(url,caps);
+
     }
 
     @AfterClass
