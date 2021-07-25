@@ -10,8 +10,10 @@ import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -123,27 +125,21 @@ public class homePage {
         return toastMessage;
     }
     public void clickonPopup(AppiumDriver<MobileElement> driverr) throws InterruptedException {
+        TouchAction touchAction=new TouchAction(driverr);
         displayPopup.click();
         wait.until(ExpectedConditions.visibilityOf(popupWindow));
         System.out.println("popupWindow displayed");
         Thread.sleep(2000);
-
         Set<String> contextNames = driverr.getContextHandles();
         for (String contextName : contextNames) {
             System.out.println(contextName);
         }
-
-
-//        driverr.findElement(By.xpath("(//*[@class='android.widget.Button'])[9]")).click();
-//        Thread.sleep(3000);
-        driverr.findElement(By.xpath("//*[contains(text(),'miss')]")).click();
-        Thread.sleep(2000);
-//        Alert alert = driverr.switchTo().alert();
-//        alert.dismiss();
-
-        TouchAction act = new TouchAction(driverr);
-
+        popupWindow.click();
+        System.out.println("popupWindow Clicked");
+        Thread.sleep(3000);
+        touchAction.press(PointOption.point(720, 1053)).release().perform();
         System.out.println("Dismissed");
+        Thread.sleep(2000);
     }
 
     public String clickToUnhandledException(AppiumDriver<MobileElement> driverr) throws InterruptedException {

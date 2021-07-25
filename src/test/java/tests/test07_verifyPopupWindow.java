@@ -19,11 +19,5 @@ public class test07_verifyPopupWindow extends BaseClass{
     public void test_verifyPopup() throws InterruptedException, IOException {
         homePage hp = new homePage(driver);
         hp.clickonPopup(driver);
-
-        Set<String> contextNames = driver.getContextHandles();
-        for (String contextName : contextNames) {
-            System.out.println(contextName);
-        }
-        //driver.context(contextNames.toArray()[1].toString());
     }
 }

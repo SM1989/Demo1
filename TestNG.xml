@@ -8,15 +8,15 @@
 
     <test thread-count="1" name="Appium Demo Test" verbose="2">
         <classes>
-<!--            <class name="test.java.tests.test01_verifyTitle" />-->
-<!--            <class name="test.java.tests.test02_verifyClickingNoButton" />-->
+            <class name="test.java.tests.test01_verifyTitle" />
+            <class name="test.java.tests.test02_verifyClickingNoButton" />
             <class name="test.java.tests.test03_verifyNameAndCarWebView" />
             <class name="test.java.tests.test04_verifyUserRegistration" />
-<!--            <class name="test.java.tests.test05_verifyProgressBar" />-->
-<!--            <class name="test.java.tests.test06_verifyToastMessage" />-->
-<!--            <class name="test.java.tests.test07_verifyPopupWindow" />-->
-<!--            <class name="test.java.tests.test08_verifyPressUnheldException" />-->
-<!--            <class name="test.java.tests.test09_verifyTypeUnheldException" />-->
+            <class name="test.java.tests.test05_verifyProgressBar" />
+            <class name="test.java.tests.test06_verifyToastMessage" />
+            <class name="test.java.tests.test07_verifyPopupWindow" />
+            <class name="test.java.tests.test08_verifyPressUnheldException" />
+            <class name="test.java.tests.test09_verifyTypeUnheldException" />
 
         </classes>
     </test>
