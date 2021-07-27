@@ -23,6 +23,10 @@ public class test03_verifyNameAndCarWebView extends BaseClass{
         hp.clickonWebIcon();
         Thread.sleep(2000);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        String title = hp.verifyTitle();
+        Assert.assertEquals(title,config.readData("pageTitle"));
+        String text = wp.verifyText();
+        Assert.assertEquals(text,config.readData("helloText"));
         wp.fillForm();
         Set<String> contextNames = driver.getContextHandles();
         for (String contextName : contextNames) {
@@ -45,8 +49,9 @@ public class test03_verifyNameAndCarWebView extends BaseClass{
             Assert.fail( "Car is not matched");
             System.out.println("Name is not matched");
         }
+        screenCapture(driver,"verifyWebViewNameCar");
         wp.clickHere();
-        String title = hp.verifyTitle();
-        Assert.assertEquals(title,config.readData("pageTitle"));
+        String carVal = wp.verifyPreferredCarDropdownValue();
+        Assert.assertEquals(carVal,config.readData("defaultCar"));
     }
 }

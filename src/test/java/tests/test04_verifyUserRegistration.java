@@ -26,6 +26,8 @@ public class test04_verifyUserRegistration extends BaseClass{
         hp.clickonRegisterUser();
         Thread.sleep(2000);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        String title = hp.verifyTitle();
+        Assert.assertEquals(title,config.readData("pageTitle"));
         String welcome = rup.welcomeText();
         String defaultName = rup.prefilledName();
         String defaultProgrammingLanguage = rup.prefilledProgrammingLanguage();
@@ -42,8 +44,9 @@ public class test04_verifyUserRegistration extends BaseClass{
         Assert.assertEquals(actualResults.toArray()[3],config.readData("email"));
         Assert.assertEquals(actualResults.toArray()[4],config.readData("programingLanguage"));
         Assert.assertEquals(actualResults.toArray()[5],"true");
+        screenCapture(driver,"verifyUserRegistration");
         rup.clickRegisterUser();
-        String title = hp.verifyTitle();
-        Assert.assertEquals(title,config.readData("pageTitle"));
+        Boolean home = hp.verifyHomepageDisplayed();
+        Assert.assertTrue(home,"Home Screen is not displayed");
     }
 }

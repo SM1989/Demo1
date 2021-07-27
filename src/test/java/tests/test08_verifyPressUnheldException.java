@@ -18,6 +18,7 @@ public class test08_verifyPressUnheldException extends BaseClass{
     public void test_verifyPressToException() throws InterruptedException, IOException {
         homePage hp = new homePage(driver);
         String text = hp.clickToUnhandledException(driver);
+        screenCapture(driver,"verifyPressToException");
         Assert.assertEquals(text,config.readData("exceptionText"));
     }
 }

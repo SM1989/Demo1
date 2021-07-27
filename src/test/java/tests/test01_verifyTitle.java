@@ -17,6 +17,7 @@ public class test01_verifyTitle extends BaseClass{
         String title = hp.verifyTitle();
         //String pageTitle = driver.getTitle();
         Boolean result = hp.verifyElements();
+        screenCapture(driver,"verifyTitle");
         Assert.assertEquals(title,config.readData("pageTitle"));
         Assert.assertTrue(result,"Items are not Displayed");
     }

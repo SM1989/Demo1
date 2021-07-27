@@ -18,6 +18,7 @@ public class test09_verifyTypeUnheldException extends BaseClass{
         homePage hp = new homePage(driver);
         String text = hp.typeToUnhandledException(config.readData("name"), driver);
         System.out.println("text -- "+text);
+        screenCapture(driver,"verifyTypeToException");
         if (text.trim().equalsIgnoreCase(config.readData("exceptionText"))){
             System.out.println("exceptionText -- "+text);
             Assert.assertTrue(true);

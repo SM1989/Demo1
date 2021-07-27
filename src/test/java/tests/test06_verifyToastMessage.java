@@ -22,6 +22,7 @@ public class test06_verifyToastMessage extends BaseClass{
         Thread.sleep(2000);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         String toastText = hp.clickonDisplayToast(driver);
+        screenCapture(driver,"verifyToast");
         Assert.assertEquals(toastText,config.readData("toastText"));
     }
 }

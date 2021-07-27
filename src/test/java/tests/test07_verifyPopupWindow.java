@@ -19,5 +19,7 @@ public class test07_verifyPopupWindow extends BaseClass{
     public void test_verifyPopup() throws InterruptedException, IOException {
         homePage hp = new homePage(driver);
         hp.clickonPopup(driver);
+        screenCapture(driver,"verifyPopupWindow");
+
     }
 }

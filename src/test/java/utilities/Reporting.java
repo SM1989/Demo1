@@ -43,7 +43,7 @@ public class Reporting extends TestListenerAdapter
         extent.setSystemInfo("user","Saurabh Mukherjee");
 
         htmlReporter.config().setDocumentTitle("Demo Project"); // Tile of report
-        htmlReporter.config().setReportName("UI Test Automation Report"); // name of the report
+        htmlReporter.config().setReportName("Appium Mobile Test Automation Report"); // name of the report
         //htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP); //location of the chart
         htmlReporter.config().setTheme(Theme.DARK);
     }

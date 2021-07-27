@@ -2,8 +2,10 @@ package test.java.pages;
 
 import com.github.javafaker.Bool;
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.FindsByAndroidUIAutomator;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
+import io.appium.java_client.android.Activity;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidKeyCode;
 import io.appium.java_client.android.nativekey.AndroidKey;
@@ -11,7 +13,9 @@ import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.touch.offset.PointOption;
-import org.openqa.selenium.Alert;
+
+
+//import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -81,6 +85,17 @@ public class homePage {
         return title;
     }
 
+    public Boolean verifyHomepageDisplayed() {
+        try {
+            wait.until(ExpectedConditions.visibilityOf(enButton));
+            enButton.isDisplayed();
+            System.out.println("Home Screen is displayed");
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
     public Boolean verifyElements() {
         try {
             enButton.isDisplayed();
@@ -134,10 +149,12 @@ public class homePage {
         for (String contextName : contextNames) {
             System.out.println(contextName);
         }
-        popupWindow.click();
-        System.out.println("popupWindow Clicked");
-        Thread.sleep(3000);
-        touchAction.press(PointOption.point(720, 1053)).release().perform();
+
+//        switcActivity(driverr);
+//        System.out.println("Switched Activity--");
+//        driverr.findElement(By.id("io.selendroid.testapp:id/popup_dismiss_button")).click();
+        Thread.sleep(2000);
+        touchAction.press(PointOption.point(360, 846)).release().perform();
         System.out.println("Dismissed");
         Thread.sleep(2000);
     }
@@ -156,5 +173,24 @@ public class homePage {
         wait.until(ExpectedConditions.visibilityOf(appCrashException));
         System.out.println("Exception Title -- "+appCrashException.getText());
         return appCrashException.getText();
+    }
+
+    public void switcActivity(AppiumDriver<MobileElement> driverrr) {
+        try {
+            System.out.println("Try Block");
+            System.out.println("Package -- "+((AndroidDriver) driverrr).getCurrentPackage());
+            System.out.println("Activity -- "+((AndroidDriver) driverrr).currentActivity());
+            Activity act = new Activity("io.selendroid.testapp", "io.selendroid.testapp.PopupWindow:3a9fe1c");
+            ((AndroidDriver) driverrr).startActivity(act);
+            System.out.println("Switched Activity");
+        }
+        catch (Exception exc){
+            System.out.println("Catch Block");
+            System.out.println("Package -- "+((AndroidDriver) driverrr).getCurrentPackage());
+            System.out.println("Activity -- "+((AndroidDriver) driverrr).currentActivity());
+            Activity act = new Activity("io.selendroid.testapp", "io.selendroid.testapp.PopupWindow:666e008");
+            ((AndroidDriver) driverrr).startActivity(act);
+            System.out.println("Switched Activity in Catch Block");
+        }
     }
 }

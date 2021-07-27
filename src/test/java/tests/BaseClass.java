@@ -3,10 +3,14 @@ package test.java.tests;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.*;
 import test.java.utilities.ReadConfig;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 
@@ -48,5 +52,14 @@ public class BaseClass {
     public void tearDown(){
         driver.quit();
         System.out.println("Done");
+    }
+
+    public void screenCapture(AndroidDriver<MobileElement> driver, String testName) throws IOException {
+        TakesScreenshot ts = (TakesScreenshot) driver;
+        File source = ts.getScreenshotAs(OutputType.FILE);
+        File target = new File(System.getProperty("user.dir")+"/Screenshots/"+testName+".png");
+        FileUtils.copyFile(source,target);
+        System.out.println("Screenshot Captured");
+        System.out.println("Screenshot Name -- "+System.getProperty("user.dir")+"/Screenshots/"+testName+".png");
     }
 }

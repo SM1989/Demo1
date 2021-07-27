@@ -39,6 +39,10 @@ public class webViewPage {
     public WebElement carAfter;
     @AndroidFindBy(xpath = "(//*[@class='android.view.View'])[10]")
     public WebElement click;
+    @AndroidFindBy(xpath = "(//*[@class='android.view.View'])[1]")
+    public WebElement helloText;
+
+
 
 
     public Boolean verifywebViewDisplayed() {
@@ -52,6 +56,20 @@ public class webViewPage {
         mercedes.click();
         sendButton.click();
         Thread.sleep(2000);
+    }
+
+    public String verifyText() throws InterruptedException {
+        wait.until(ExpectedConditions.visibilityOf(helloText));
+        String hellotext = helloText.getText();
+        System.out.println("Text -- "+hellotext.trim());
+        return hellotext.trim();
+    }
+
+    public String verifyPreferredCarDropdownValue() {
+        wait.until(ExpectedConditions.visibilityOf(dropdown));
+        String carValue = dropdown.getText();
+        System.out.println("Default Car -- "+carValue.trim());
+        return carValue.trim();
     }
     public String verifyName(){
         String name = nameAfter.getText().trim();

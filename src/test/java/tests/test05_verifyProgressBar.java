@@ -21,6 +21,7 @@ public class test05_verifyProgressBar extends BaseClass{
         homePage hp = new homePage(driver);
         registerUserPage rup = new registerUserPage(driver);
         hp.clickonShowProgress(driver);
+        screenCapture(driver,"verifyProgressBarBox");
         Thread.sleep(2000);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         Boolean result = rup.verifyAllFields(driver);
