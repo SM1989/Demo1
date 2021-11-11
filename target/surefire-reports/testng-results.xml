@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-07-27T10:45:43Z" name="Appium Demo Test Suite" finished-at="2021-07-27T10:48:43Z" duration-ms="179712">
+    <groups>
+    </groups>
+    <test started-at="2021-07-27T10:45:43Z" name="Appium Demo Test" finished-at="2021-07-27T10:48:43Z" duration-ms="179712">
+      <class name="test.java.tests.test04_verifyUserRegistration">
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.java.tests.test04_verifyUserRegistration@10cf09e8]" started-at="2021-07-27T10:46:35Z" name="setup" finished-at="2021-07-27T10:46:44Z" duration-ms="8304" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="test_verifyUserRegistration()[pri:0, instance:test.java.tests.test04_verifyUserRegistration@10cf09e8]" started-at="2021-07-27T10:46:44Z" name="test_verifyUserRegistration" finished-at="2021-07-27T10:47:03Z" duration-ms="19456" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_verifyUserRegistration -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.java.tests.test04_verifyUserRegistration@10cf09e8]" started-at="2021-07-27T10:47:03Z" name="tearDown" finished-at="2021-07-27T10:47:04Z" duration-ms="320" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- test.java.tests.test04_verifyUserRegistration -->
+      <class name="test.java.tests.test06_verifyToastMessage">
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.java.tests.test06_verifyToastMessage@ee86bcb]" started-at="2021-07-27T10:47:33Z" name="setup" finished-at="2021-07-27T10:47:41Z" duration-ms="8515" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="test_verifyToast()[pri:0, instance:test.java.tests.test06_verifyToastMessage@ee86bcb]" started-at="2021-07-27T10:47:41Z" name="test_verifyToast" finished-at="2021-07-27T10:47:45Z" duration-ms="4084" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_verifyToast -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.java.tests.test06_verifyToastMessage@ee86bcb]" started-at="2021-07-27T10:47:45Z" name="tearDown" finished-at="2021-07-27T10:47:46Z" duration-ms="239" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- test.java.tests.test06_verifyToastMessage -->
+      <class name="test.java.tests.test08_verifyPressUnheldException">
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.java.tests.test08_verifyPressUnheldException@7f132176]" started-at="2021-07-27T10:48:03Z" name="setup" finished-at="2021-07-27T10:48:12Z" duration-ms="9359" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="test_verifyPressToException()[pri:0, instance:test.java.tests.test08_verifyPressUnheldException@7f132176]" started-at="2021-07-27T10:48:12Z" name="test_verifyPressToException" finished-at="2021-07-27T10:48:19Z" duration-ms="7087" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_verifyPressToException -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.java.tests.test08_verifyPressUnheldException@7f132176]" started-at="2021-07-27T10:48:19Z" name="tearDown" finished-at="2021-07-27T10:48:20Z" duration-ms="203" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- test.java.tests.test08_verifyPressUnheldException -->
+      <class name="test.java.tests.test05_verifyProgressBar">
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.java.tests.test05_verifyProgressBar@1921ad94]" started-at="2021-07-27T10:47:04Z" name="setup" finished-at="2021-07-27T10:47:12Z" duration-ms="8458" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="test_verifyProgressBarBox()[pri:0, instance:test.java.tests.test05_verifyProgressBar@1921ad94]" started-at="2021-07-27T10:47:12Z" name="test_verifyProgressBarBox" finished-at="2021-07-27T10:47:32Z" duration-ms="20378" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_verifyProgressBarBox -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.java.tests.test05_verifyProgressBar@1921ad94]" started-at="2021-07-27T10:47:32Z" name="tearDown" finished-at="2021-07-27T10:47:33Z" duration-ms="306" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- test.java.tests.test05_verifyProgressBar -->
+      <class name="test.java.tests.test09_verifyTypeUnheldException">
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.java.tests.test09_verifyTypeUnheldException@6bca7e0d]" started-at="2021-07-27T10:48:20Z" name="setup" finished-at="2021-07-27T10:48:28Z" duration-ms="8709" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="test_verifyTypeToException()[pri:0, instance:test.java.tests.test09_verifyTypeUnheldException@6bca7e0d]" started-at="2021-07-27T10:48:28Z" name="test_verifyTypeToException" finished-at="2021-07-27T10:48:42Z" duration-ms="14135" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_verifyTypeToException -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.java.tests.test09_verifyTypeUnheldException@6bca7e0d]" started-at="2021-07-27T10:48:42Z" name="tearDown" finished-at="2021-07-27T10:48:43Z" duration-ms="186" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- test.java.tests.test09_verifyTypeUnheldException -->
+      <class name="test.java.tests.test02_verifyClickingNoButton">
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.java.tests.test02_verifyClickingNoButton@1f010bf0]" started-at="2021-07-27T10:46:00Z" name="setup" finished-at="2021-07-27T10:46:09Z" duration-ms="9133" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="test_verifyClickingEnNoButton()[pri:0, instance:test.java.tests.test02_verifyClickingNoButton@1f010bf0]" started-at="2021-07-27T10:46:09Z" name="test_verifyClickingEnNoButton" finished-at="2021-07-27T10:46:13Z" duration-ms="3419" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_verifyClickingEnNoButton -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.java.tests.test02_verifyClickingNoButton@1f010bf0]" started-at="2021-07-27T10:46:13Z" name="tearDown" finished-at="2021-07-27T10:46:13Z" duration-ms="190" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- test.java.tests.test02_verifyClickingNoButton -->
+      <class name="test.java.tests.test07_verifyPopupWindow">
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.java.tests.test07_verifyPopupWindow@177bea38]" started-at="2021-07-27T10:47:46Z" name="setup" finished-at="2021-07-27T10:47:54Z" duration-ms="8323" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="test_verifyPopup()[pri:0, instance:test.java.tests.test07_verifyPopupWindow@177bea38]" started-at="2021-07-27T10:47:54Z" name="test_verifyPopup" finished-at="2021-07-27T10:48:03Z" duration-ms="8841" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_verifyPopup -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.java.tests.test07_verifyPopupWindow@177bea38]" started-at="2021-07-27T10:48:03Z" name="tearDown" finished-at="2021-07-27T10:48:03Z" duration-ms="247" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- test.java.tests.test07_verifyPopupWindow -->
+      <class name="test.java.tests.test01_verifyTitle">
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.java.tests.test01_verifyTitle@7e6ef134]" started-at="2021-07-27T10:45:46Z" name="setup" finished-at="2021-07-27T10:45:57Z" duration-ms="10599" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="test_verifyTitle()[pri:0, instance:test.java.tests.test01_verifyTitle@7e6ef134]" started-at="2021-07-27T10:45:57Z" name="test_verifyTitle" finished-at="2021-07-27T10:46:00Z" duration-ms="2946" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_verifyTitle -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.java.tests.test01_verifyTitle@7e6ef134]" started-at="2021-07-27T10:46:00Z" name="tearDown" finished-at="2021-07-27T10:46:00Z" duration-ms="339" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- test.java.tests.test01_verifyTitle -->
+      <class name="test.java.tests.test03_verifyNameAndCarWebView">
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.java.tests.test03_verifyNameAndCarWebView@40db2a24]" started-at="2021-07-27T10:46:13Z" name="setup" finished-at="2021-07-27T10:46:21Z" duration-ms="8245" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="test_verifyWebViewNameCar()[pri:0, instance:test.java.tests.test03_verifyNameAndCarWebView@40db2a24]" started-at="2021-07-27T10:46:21Z" name="test_verifyWebViewNameCar" finished-at="2021-07-27T10:46:35Z" duration-ms="13953" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_verifyWebViewNameCar -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.java.tests.test03_verifyNameAndCarWebView@40db2a24]" started-at="2021-07-27T10:46:35Z" name="tearDown" finished-at="2021-07-27T10:46:35Z" duration-ms="288" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- test.java.tests.test03_verifyNameAndCarWebView -->
+    </test> <!-- Appium Demo Test -->
+  </suite> <!-- Appium Demo Test Suite -->
+</testng-results>
